@@ -1,0 +1,88 @@
+---
+layout: post
+comments: True
+title: Unit 3 revision
+description: Editing my team teach to improve
+categories: ['AP CSA']
+courses: {'csa': {'week': 5}}
+type: ccc
+menu: nav/CSA_Units/csa_unit3_p1.html
+author: Anika Bhatnagar
+---
+
+# 3.3 If Else Statements
+
+<a id="if-else-statements"></a>
+## Purpose of Else Statements
+Else statements: Handles what happens when the if condition is false.
+Structure of If-Else:
+- If statement with a condition.
+- Else statement without a condition.
+- Both parts have code blocks surrounded by {}.
+
+- if there is only one instruction in teh if statement technically brackets aren't mandatory, but its good to pratice using them because generally there is more in the statements. 
+
+
+
+```Java
+// example of a simple if else loop: 
+// things to keep in mind: 
+// Always put a semicolon after a parenthesis 
+// make sure you use double quotes are your message 
+
+int number = 2; // change this number to see what happens when its odd
+
+if (number % 2 == 0) {
+    System.out.println("Number is even");
+} else {
+    System.out.println("Number is odd");
+}
+
+```
+
+    Number is odd
+
+
+
+```Java
+// slightly more complex loop because there are 2 messages 
+
+int myAge = 17; // adjust the age too see the difference in what it prints out
+
+System.out.println("Current age: " + myAge);
+
+if (myAge >= 16) {
+    System.out.println("You can learn to drive a car.");
+    System.out.println("Drive safe!");
+} else {
+    System.out.println("You are not old enough for a license yet.");
+    System.out.println("Try again next year");
+}
+
+```
+
+    Current age: 17
+    You can learn to drive a car.
+    Drive safe!
+
+
+### popcorn hack 1 
+
+<img width="816" alt="image" src="https://github.com/user-attachments/assets/c6701143-b87f-427b-a206-6cee0660571c">
+
+1. Based on this code, if you were younger than 16 what would it print out?
+2. Write your own if else statement
+
+
+```Java
+// popcorn hack 2 
+// Figure out what is wrong with this code and fix the error. (2 errors)
+
+int number = 2; 
+
+if (number % 2 == 0) {
+    System.out.println('Number is even');
+} else {
+    System.out.println("Number is odd")
+}
+```
