@@ -73,12 +73,10 @@ public class StudentController {
 # student.java
 
 package com.example.demo.model;
-
 public class Student {
     private String name;
     private int grade;
     private boolean status;
-
     public Student(String name, int grade, boolean status) {
         this.name = name;
         this.grade = grade;
@@ -109,9 +107,7 @@ public class Student {
     </style>
 </head>
 <body>
-
     <h2>Student List</h2>
-
     <table border="1">
         <tr>
             <th>Name</th>
