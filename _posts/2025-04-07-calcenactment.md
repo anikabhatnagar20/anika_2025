@@ -1,12 +1,5 @@
 ---
-layout: post
-comments: True
-title: 2d array hw 
-description: I put the hw into a post file because for some reason when it was an nb it was not showing up on gh pages. 
-categories: ['AP CSA']
-courses: {'csa': {'week': 5}}
-type: ccc
-author: Anika
+
 
 // Complete Java implementation of both CalculatorQueue and CalculatorStack with all features
 
