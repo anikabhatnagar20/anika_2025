@@ -56,3 +56,159 @@ Topics to review:
 | May 4 (Sat) | Light Review: Class, Arrays, Logic              | Skim notes + reinforce method, class, and array flow                 |
 | May 5 (Sun) | Rapid Recall: Flashcards + Scoring Rubrics      | Use flashcards + skim sample student FRQs + scoring                  |
 | **May 6 (Mon)** |  **AP CSA Exam Day**                         |               |
+
+
+FRQ practice: 
+[FRQ 2024](https://apcentral.collegeboard.org/media/pdf/ap24-frq-comp-sci-a.pdf)
+
+## Question 1 Feeder Simulation
+     public class Feeder {
+    private int currentFood;
+
+    public Feeder(int food) {
+        currentFood = food;
+    }
+
+    // Part (a)
+    public void simulateOneDay(int numBirds) {
+        double chance = Math.random();
+        if (chance < 0.05) {
+            currentFood = 0;
+        } else {
+            int foodPerBird = (int) (Math.random() * 41) + 10;
+            int totalFood = foodPerBird * numBirds;
+            if (totalFood >= currentFood) {
+                currentFood = 0;
+            } else {
+                currentFood -= totalFood;
+            }
+        }
+    }
+
+    // Part (b)
+    public int simulateManyDays(int numBirds, int numDays) {
+        int count = 0;
+        for (int i = 0; i < numDays; i++) {
+            if (currentFood == 0) break;
+            simulateOneDay(numBirds);
+            count++;
+        }
+        return count;
+    }
+} 
+
+## Question 2 Scoreboard 
+    public class Scoreboard {
+    private String team1Name;
+    private String team2Name;
+    private int team1Score;
+    private int team2Score;
+    private boolean isTeam1Active;
+
+    public Scoreboard(String name1, String name2) {
+        team1Name = name1;
+        team2Name = name2;
+        team1Score = 0;
+        team2Score = 0;
+        isTeam1Active = true;
+    }
+
+    public void recordPlay(int points) {
+        if (points > 0) {
+            if (isTeam1Active) {
+                team1Score += points;
+            } else {
+                team2Score += points;
+            }
+        } else {
+            isTeam1Active = !isTeam1Active;
+        }
+    }
+
+    public String getScore() {
+        return team1Score + "-" + team2Score + "-" + (isTeam1Active ? team1Name : team2Name);
+    }
+} 
+
+## Question 3 Wordchecker 
+``` import java.util.ArrayList;
+
+public class WordChecker {
+    private ArrayList<String> wordList;
+
+    public WordChecker(ArrayList<String> words) {
+        wordList = words;
+    }
+
+    // Part (a)
+    public boolean isWordChain() {
+        for (int i = 1; i < wordList.size(); i++) {
+            if (!wordList.get(i).contains(wordList.get(i - 1))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Part (b)
+    public ArrayList<String> createList(String target) {
+        ArrayList<String> result = new ArrayList<>();
+        for (String word : wordList) {
+            if (word.startsWith(target)) {
+                result.add(word.substring(target.length()));
+            }
+        }
+        return result;
+    }
+}
+
+## Question 4 GridPath and Location
+    public class Location {
+    private int theRow;
+    private int theCol;
+
+    public Location(int r, int c) {
+        theRow = r;
+        theCol = c;
+    }
+
+    public int getRow() { return theRow; }
+    public int getCol() { return theCol; }
+}
+public class GridPath {
+    private int[][] grid;
+
+    public GridPath(int[][] g) {
+        grid = g;
+    }
+
+    // Part (a)
+    public Location getNextLoc(int row, int col) {
+        boolean hasRight = col + 1 < grid[0].length;
+        boolean hasDown = row + 1 < grid.length;
+
+        if (hasRight && hasDown) {
+            if (grid[row + 1][col] < grid[row][col + 1]) {
+                return new Location(row + 1, col);
+            } else {
+                return new Location(row, col + 1);
+            }
+        } else if (hasRight) {
+            return new Location(row, col + 1);
+        } else {
+            return new Location(row + 1, col);
+        }
+    }
+
+    // Part (b)
+    public int sumPath(int row, int col) {
+        int sum = grid[row][col];
+        while (row != grid.length - 1 || col != grid[0].length - 1) {
+            Location next = getNextLoc(row, col);
+            row = next.getRow();
+            col = next.getCol();
+            sum += grid[row][col];
+        }
+        return sum;
+    }
+}
