@@ -136,3 +136,109 @@ public class DequeExperiment {
         System.out.println("Deque is now empty: " + deque);
     }
 }
+
+
+## Part 1 hw 
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListExample {
+    // Filters even numbers from the input list
+    public static List<Integer> filterEvenNumbers(List<Integer> input) {
+        List<Integer> evens = new ArrayList<>();
+        for (int i = 0; i < input.size(); i++) {
+            int num = input.get(i);
+            if (num % 2 == 0) {
+                evens.add(num);
+            }
+        }
+        return evens;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> input = new ArrayList<>();
+        for (int i = 1; i <= 10; i++) {
+            input.add(i);
+        }
+
+        List<Integer> result = filterEvenNumbers(input);
+
+        System.out.println("Input List: " + input);
+        System.out.println("Filtered Even Numbers: " + result);
+    }
+}
+
+## part 2 hw 
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetExample {
+    // Finds the intersection between two sets
+    public static Set<String> findIntersection(Set<String> set1, Set<String> set2) {
+        Set<String> result = new HashSet<>();
+        for (String item : set1) {
+            if (set2.contains(item)) {
+                result.add(item);
+            }
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Set<String> set1 = new HashSet<>();
+        set1.add("apple");
+        set1.add("banana");
+        set1.add("cherry");
+        set1.add("date");
+
+        Set<String> set2 = new HashSet<>();
+        set2.add("banana");
+        set2.add("date");
+        set2.add("fig");
+        set2.add("grape");
+
+        Set<String> intersection = findIntersection(set1, set2);
+
+        System.out.println("Set1: " + set1);
+        System.out.println("Set2: " + set2);
+        System.out.println("Intersection: " + intersection);
+    }
+}
+
+## part 3 hw 
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class DequeExample {
+    public static void main(String[] args) {
+        Deque<String> line = new ArrayDeque<>();
+
+        // Enqueue 4 regular customers at the end
+        line.addLast("Alice");
+        line.addLast("Bob");
+        line.addLast("Charlie");
+        line.addLast("Diana");
+
+        System.out.println("Initial line after adding 4 customers (end): " + line);
+
+        // VIP customer arrives at the front
+        line.addFirst("VIP1");
+        System.out.println("After VIP arrival (added at front): " + line);
+
+        // Serve customer at the front
+        line.removeFirst();
+        System.out.println("After serving the customer at the front (removed): " + line);
+
+        // Inspect front and back of the line
+        System.out.println("Current front of the line: " + line.peekFirst());
+        System.out.println("Current back of the line: " + line.peekLast());
+
+        // Size of the deque
+        System.out.println("Total number of customers waiting: " + line.size());
+    }
+}
+
+## bonus: 
+// Use a HashSet for storing unique student IDs efficiently
+Set<String> studentIDs = new HashSet<>();

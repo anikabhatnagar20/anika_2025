@@ -19,11 +19,9 @@ Preperation Checklist
 - [ ] Used AP Classroom progress checks
 - [x] Read scoring guidelines + samples
 - [ ] Review over formula sheet given 
-
+Collegeboard MCQs: <img width="1236" alt="Image" src="https://github.com/user-attachments/assets/086c76b9-5ebb-4bca-a31c-d4bdababca54" />
 Full topic flowchart: 
 <img width="357" alt="Image" src="https://github.com/user-attachments/assets/754f8060-c4ae-4be1-94f3-9a5bd65c3fe5" />
-College Board MCQs:
-<img width="608" alt="Image" src="https://github.com/user-attachments/assets/ad5a79db-4d4d-4691-bc68-f4dd5618ef41" />
 Topics to review:
 - [ ]  Creating and Storing Objects (Instantiation)
 - [ ] Static Variables and Methods
