@@ -59,7 +59,7 @@ Topics to review:
 FRQ practice: 
 [FRQ 2024](https://apcentral.collegeboard.org/media/pdf/ap24-frq-comp-sci-a.pdf)
 
-## Question 1 Feeder Simulation
+## Question 1 Feeder Simulation: Methods and Control Structures
      public class Feeder {
     private int currentFood;
 
@@ -107,8 +107,12 @@ Understand random logic and how to scale events (like feeding multiple birds).
 
 Know how to break simulation into two parts: one-time and repeated.
 
+Methods and Control Structures
 
-## Question 2 Scoreboard 
+Why:
+It involves calling and writing methods (simulateOneDay, simulateManyDays), uses conditionals and loops, and works within an existing class.
+
+## Question 2 Scoreboard: Classes 
     public class Scoreboard {
     private String team1Name;
     private String team2Name;
@@ -154,9 +158,12 @@ Learn to use boolean flags to switch states (like turns).
 
 Practice formatting return strings for output.
 
+Classes
 
+Why:
+I am designing a full class from scratch, managing state with instance variables, writing constructors, and defining multiple methods with logic.
 
-## Question 3 Wordchecker 
+## Question 3 Wordchecker: Array/Arraylist 
 ``` import java.util.ArrayList;
 
 public class WordChecker {
@@ -198,8 +205,12 @@ Practice using ArrayList and string methods like contains() and startsWith().
 Always check for edge cases like empty list or substring logic.
 
 Be ready to build and return a new list, not just modify the original.
+Array/ArrayList
 
-## Question 4 GridPath and Location
+Why:
+You manipulate and traverse an ArrayList<String> using loops, conditionals, and string methods. It’s focused on list-based processing.
+
+## Question 4 GridPath and Location: 2d Array 
     public class Location {
     private int theRow;
     private int theCol;
@@ -262,5 +273,11 @@ Practice working with 2D arrays and index bounds.
 Understand how to compare adjacent elements (right and down).
 
 Know how to use a helper class to return multiple values (like row and col).
+
+2D Array
+
+Why:
+This question involves accessing and comparing values in a 2D array (int[][] grid) and traversing it using row/column logic.
+
 
 
