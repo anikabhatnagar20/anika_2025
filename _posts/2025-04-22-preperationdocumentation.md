@@ -95,6 +95,19 @@ FRQ practice:
     }
 } 
 
+Simulates random food usage by birds, with rare chance of complete depletion.
+
+Uses Math.random() for unpredictability in food use.
+
+simulateOneDay handles daily logic, simulateManyDays repeats it with conditions.
+
+Remember for FRQs:
+
+Understand random logic and how to scale events (like feeding multiple birds).
+
+Know how to break simulation into two parts: one-time and repeated.
+
+
 ## Question 2 Scoreboard 
     public class Scoreboard {
     private String team1Name;
@@ -127,6 +140,21 @@ FRQ practice:
         return team1Score + "-" + team2Score + "-" + (isTeam1Active ? team1Name : team2Name);
     }
 } 
+Keeps track of score between two teams and whose turn it is.
+
+recordPlay() updates score or switches team.
+
+getScore() returns a formatted string including active team.
+
+ Remember for FRQs:
+
+Know how to track two competing values.
+
+Learn to use boolean flags to switch states (like turns).
+
+Practice formatting return strings for output.
+
+
 
 ## Question 3 Wordchecker 
 ``` import java.util.ArrayList;
@@ -159,6 +187,17 @@ public class WordChecker {
         return result;
     }
 }
+Part (a) checks if each word contains the previous word → a word chain.
+
+Part (b) creates a new list by trimming the prefix (target) from matching words.
+
+Remember for FRQs:
+
+Practice using ArrayList and string methods like contains() and startsWith().
+
+Always check for edge cases like empty list or substring logic.
+
+Be ready to build and return a new list, not just modify the original.
 
 ## Question 4 GridPath and Location
     public class Location {
@@ -210,3 +249,18 @@ public class GridPath {
         return sum;
     }
 }
+Finds the path through a grid based on smallest adjacent value (greedy method).
+
+Uses a helper class (Location) for coordinates.
+
+Traverses until it reaches the bottom-right corner, summing the values.
+
+Remember for FRQs:
+
+Practice working with 2D arrays and index bounds.
+
+Understand how to compare adjacent elements (right and down).
+
+Know how to use a helper class to return multiple values (like row and col).
+
+
