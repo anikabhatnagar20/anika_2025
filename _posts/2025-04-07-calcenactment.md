@@ -1,6 +1,4 @@
 ---
-
-
 // Complete Java implementation of both CalculatorQueue and CalculatorStack with all features
 
 import java.util.*;
