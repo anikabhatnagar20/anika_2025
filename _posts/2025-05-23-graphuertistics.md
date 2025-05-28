@@ -1,3 +1,15 @@
+---
+layout: post
+comments: True
+title: graph hueristics hw 
+description: graph hueristics hw 
+categories: ['AP CSA']
+courses: {'csa': {'week': 5}}
+type: ccc
+menu: nav/CSA_Units/csa_unit3_p1.html
+author: Anika Bhatnagar
+---
+
 ## popcorn hack
 A robotic mouse on a maze goes the same distance each time, whats the nodes? Is it weighted? 
 - its not weighted becasue teh ouse moves teh same distance each time
