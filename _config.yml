@@ -10,3 +10,5 @@ plugins:
   - jekyll-seo-tag
 minima:
   skin: dark
+exclude:
+  - _posts/Foundation/**
