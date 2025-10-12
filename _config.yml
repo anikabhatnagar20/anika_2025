@@ -1,19 +1,12 @@
 title: Anika's Page
 description: "Class of 2025"
 owner_name: Anika Bhatnagar
-
 url: "https://anikabhatnagar20.github.io"
 baseurl: "/anika_2025"
-
-github_username: anikabhatnagar20
-github_repo: anika_2025
-future: true
-
 remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
-
 minima:
   skin: dark
