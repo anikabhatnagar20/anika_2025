@@ -1,12 +1,11 @@
 ---
 layout: base
-title: Student Home 
+title: Pencil & Proof 
 description: Home Page
 hide: true
 ---
 
-Anika's page: 
-Welcome to my blog. 
+Welcome to my blog. I post articles that connect science, technology, and everyday life. I focus on clearly explaining, interesting experiments, and recent developments in my areas of interest with resourses and tools so you can dig deeper! 
 
 <html lang="en">
 <head>
